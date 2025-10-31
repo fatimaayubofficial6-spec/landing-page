@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional developer portfolio showcasing projects, skills, and experience">
     <meta name="theme-color" content="#2563eb">
+    <meta name="color-scheme" content="light dark">
     <title>Developer Portfolio</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <!--
+      README: Customizing the hero
+      - Headline: Edit the text inside <h1 id="hero-title">...</h1>
+      - Subheadline: Edit the paragraph directly below the headline.
+      - Primary CTA: Update the "Get in touch" <a> href (currently "#contact") and text if desired.
+      - Secondary CTA: Update the "View projects" <a> href (currently "#projects") and text if desired.
+      - Social links: Replace the href values for GitHub, LinkedIn, and X in the .hero__social icons row.
+      - Avatar/illustration: Replace images/placeholder.svg with your image and update the alt text.
+      - Colors/Theme: Tweak CSS variables in assets/styles.css. Dark mode is automatic via prefers-color-scheme.
+    -->
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -44,23 +56,37 @@
 
     <main class="main" id="main-content">
         <section class="hero section" id="home">
-            <div class="hero__container container">
+            <div class="hero__container container" aria-labelledby="hero-title">
                 <div class="hero__content">
-                    <h1 class="hero__title">
-                        Hi, I'm <span class="hero__name">Your Name</span>
-                    </h1>
-                    <p class="hero__subtitle">Full Stack Developer</p>
-                    <p class="hero__description">
-                        I craft engaging digital experiences through elegant code. 
-                        Specializing in modern web technologies and user-centered design.
+                    <h1 class="hero__title" id="hero-title">Building reliable software faster</h1>
+                    <p class="hero__subtitle">
+                        I help teams ship robust, maintainable products with modern web technologies — from idea to production, with an eye for DX and UX.
                     </p>
                     <div class="hero__actions">
-                        <a href="#projects" class="btn btn--primary">View Projects</a>
-                        <a href="#contact" class="btn btn--secondary">Get In Touch</a>
+                        <a href="#contact" class="btn btn--primary">Get in touch</a>
+                        <a href="#projects" class="btn btn--secondary">View projects</a>
                     </div>
+                    <nav class="hero__social" aria-label="Social links">
+                        <a class="social-link" href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.16-.68-.56-.01-.57.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                        <a class="social-link" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554V14.84c0-1.336-.027-3.058-1.865-3.058-1.866 0-2.152 1.459-2.152 2.966v5.704H9.321V9h3.155v1.561h.049c.476-.9 1.637-1.848 3.37-1.848 3.603 0 4.268 2.371 4.268 5.456v6.283zM5.337 7.433c-1.145 0-2.072-.928-2.072-2.073a2.072 2.072 0 114.144 0c0 1.145-.928 2.073-2.072 2.073zM6.912 20.452H3.757V9h3.155v11.452z"/>
+                            </svg>
+                        </a>
+                        <a class="social-link" href="https://x.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="X">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <line x1="4" y1="3" x2="20" y2="21" stroke="currentColor" stroke-width="2"/>
+                                <line x1="20" y1="3" x2="4" y2="21" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </nav>
                 </div>
                 <div class="hero__image">
-                    <div class="hero__image-placeholder"></div>
+                    <img src="images/placeholder.svg" alt="Abstract profile illustration" width="480" height="480" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
