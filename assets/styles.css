@@ -1,0 +1,119 @@
+/* Modern hero enhancements and dark mode overrides
+   - Adds subtle animated background respecting reduced motion
+   - Introduces social icon styles with accessible focus states
+   - Provides automatic dark mode via prefers-color-scheme overriding existing CSS variables
+*/
+
+:root { color-scheme: light dark; }
+
+/* Dark mode: reuse existing design tokens and only override values used by the page */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0b1220;
+    --color-surface: #0e1628;
+    --color-surface-muted: #0b1324;
+    --color-text: #e5e7eb;
+    --color-text-muted: #a3b1c6;
+    --color-border: #1f2a44;
+    --color-shadow: rgba(0, 0, 0, 0.5);
+    /* Keep primary consistent for brand and contrast on dark backgrounds */
+    /* --color-primary: #7c9cff; */
+  }
+
+  body { background: var(--color-bg); color: var(--color-text); }
+  .header { background: rgba(14, 22, 40, 0.82); }
+}
+
+/* Improve focus visibility for keyboard users across components */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Hero animated background (subtle) */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__container { position: relative; z-index: 1; }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10%;
+  background:
+    radial-gradient(42rem 42rem at 12% 10%, hsl(258 100% 80% / 0.28), transparent 60%),
+    radial-gradient(36rem 36rem at 88% 90%, hsl(200 100% 78% / 0.26), transparent 60%),
+    radial-gradient(24rem 24rem at 50% 10%, hsl(160 84% 68% / 0.12), transparent 70%);
+  filter: blur(24px);
+  animation: heroFloat 14s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes heroFloat {
+  0% { transform: translate3d(0, -2%, 0) scale(1); opacity: 0.9; }
+  100% { transform: translate3d(0, 2%, 0) scale(1.03); opacity: 1; }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Hero media: show illustration on larger screens only */
+.hero__image { display: none; }
+
+@media (min-width: 48rem) {
+  .hero__image {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.hero__image img {
+  width: min(22rem, 85%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  background: var(--color-surface);
+}
+
+/* Social icons row */
+.hero__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+@media (min-width: 48rem) {
+  .hero__social { justify-content: flex-start; }
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: transform 180ms ease, background-color 180ms ease,
+              border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: var(--shadow-sm);
+}

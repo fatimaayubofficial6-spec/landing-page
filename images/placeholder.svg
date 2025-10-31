@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480" height="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract profile illustration">
+  <defs>
+    <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(140 120) rotate(45) scale(160)">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(360 340) rotate(-30) scale(180)">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 60) rotate(0) scale(120)">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="480" height="480" fill="none"/>
+
+  <circle cx="140" cy="120" r="160" fill="url(#g1)"/>
+  <circle cx="360" cy="340" r="180" fill="url(#g2)"/>
+  <circle cx="240" cy="60" r="120" fill="url(#g3)"/>
+
+  <!-- Simple mask to add a subtle profile silhouette -->
+  <g opacity="0.10">
+    <circle cx="240" cy="210" r="72" fill="#0f172a"/>
+    <rect x="150" y="300" width="180" height="120" rx="90" fill="#0f172a"/>
+  </g>
+</svg>
