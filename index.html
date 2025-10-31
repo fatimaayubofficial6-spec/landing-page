@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional developer portfolio showcasing projects, skills, and experience">
+    <meta name="theme-color" content="#2563eb">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+        <nav class="nav container" aria-label="Primary">
+            <a href="#home" class="nav__logo">
+                <span class="nav__logo-text">Portfolio</span>
+            </a>
+            
+            <div class="nav__menu" id="navMenu" data-open="false" aria-hidden="true">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="nav__toggle" id="navToggle" type="button" aria-label="Toggle navigation menu" aria-controls="navMenu" aria-expanded="false">
+                <span class="nav__toggle-icon"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main" id="main-content">
+        <section class="hero section" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Hi, I'm <span class="hero__name">Your Name</span>
+                    </h1>
+                    <p class="hero__subtitle">Full Stack Developer</p>
+                    <p class="hero__description">
+                        I craft engaging digital experiences through elegant code. 
+                        Specializing in modern web technologies and user-centered design.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#projects" class="btn btn--primary">View Projects</a>
+                        <a href="#contact" class="btn btn--secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__image-placeholder"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title">About Me</h2>
+                <div class="about__content">
+                    <p class="about__text">
+                        I'm a passionate developer with a keen eye for detail and a commitment to creating 
+                        high-quality, scalable applications. With experience across the full stack, I bring 
+                        ideas to life through clean, maintainable code.
+                    </p>
+                    <p class="about__text">
+                        I believe in continuous learning and staying current with the latest technologies 
+                        and best practices. When I'm not coding, you'll find me contributing to open source 
+                        or exploring new frameworks and tools.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section__title">Skills & Technologies</h2>
+                <div class="skills__grid">
+                    <div class="skill-card">
+                        <div class="skill-card__icon">🎨</div>
+                        <h3 class="skill-card__title">Frontend</h3>
+                        <ul class="skill-card__list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React / Vue</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">⚙️</div>
+                        <h3 class="skill-card__title">Backend</h3>
+                        <ul class="skill-card__list">
+                            <li>Node.js / Express</li>
+                            <li>Python / Django</li>
+                            <li>RESTful APIs</li>
+                            <li>Database Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">🗄️</div>
+                        <h3 class="skill-card__title">Database</h3>
+                        <ul class="skill-card__list">
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                            <li>SQL Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">🚀</div>
+                        <h3 class="skill-card__title">DevOps</h3>
+                        <ul class="skill-card__list">
+                            <li>Git & GitHub</li>
+                            <li>Docker</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Cloud Services (AWS)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section__title">Featured Projects</h2>
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__image-placeholder"></div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">E-Commerce Platform</h3>
+                            <p class="project-card__description">
+                                A full-featured online shopping platform with user authentication, 
+                                product management, and secure payment integration.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link">View Demo</a>
+                                <a href="#" class="project-card__link">Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__image-placeholder"></div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Task Management App</h3>
+                            <p class="project-card__description">
+                                A collaborative task management application with real-time updates, 
+                                drag-and-drop functionality, and team collaboration features.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">Express</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link">View Demo</a>
+                                <a href="#" class="project-card__link">Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__image-placeholder"></div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Weather Dashboard</h3>
+                            <p class="project-card__description">
+                                A responsive weather application that provides real-time weather data, 
+                                forecasts, and interactive maps using external APIs.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">API Integration</span>
+                                <span class="tag">CSS Grid</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link">View Demo</a>
+                                <a href="#" class="project-card__link">Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section__title">Get In Touch</h2>
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <p class="contact__text">
+                            I'm always interested in hearing about new projects and opportunities. 
+                            Whether you have a question or just want to say hi, feel free to reach out!
+                        </p>
+                        <div class="contact__details">
+                            <div class="contact__detail">
+                                <span class="contact__icon">📧</span>
+                                <a href="mailto:your.email@example.com" class="contact__link">your.email@example.com</a>
+                            </div>
+                            <div class="contact__detail">
+                                <span class="contact__icon">💼</span>
+                                <a href="https://linkedin.com" class="contact__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </div>
+                            <div class="contact__detail">
+                                <span class="contact__icon">🐙</span>
+                                <a href="https://github.com" class="contact__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Name</label>
+                            <input type="text" id="name" name="name" class="form__input" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message</label>
+                            <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© 2025 Developer Portfolio. All rights reserved.</p>
+            <div class="footer__social">
+                <a href="#" class="footer__link" aria-label="GitHub">GitHub</a>
+                <a href="#" class="footer__link" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" class="footer__link" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
